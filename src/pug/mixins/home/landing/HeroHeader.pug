@@ -1,0 +1,76 @@
+
+append variables
+  -
+    var testimonial= [
+      {
+        image:'user-1.png',
+        text:'I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> <br>as I now know by the book"',
+        name:'Andry Ford',
+        designation:'CEO at Whatever',
+      },
+      {
+        image:'user-1.png',
+        text:`I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> <br>  as I now know by the book"`,
+        name:'Andry Ford',
+        designation:'CEO at Whatever',
+      },
+      {
+        image:'user-1.png',
+        text:'I feel so much less stressed<i class="fa fa-heart text-danger fs-2"></i>  <br>as I now know by the book"',
+        name:'',
+        designation:'',
+      },
+      {
+        image:'user-1.png',
+        text:'I feel so much less stressed<i class="fa fa-heart text-danger fs-2"></i>  <br>as I now know by the book"',
+        name:'',
+        designation:'',
+      },
+   
+    ];
+
+mixin Testimonials(config)
+  h1.fs-4!=config.text
+  .d-flex.align-items-md-center
+    img(src=`${CWD}assets/img/gallery/${config.image}` width="100" alt='').img-fluid.me-4.me-md-3.me-lg-4
+    .w-lg-50.my-3
+      h5.mb-0.fw-bold=config.name
+      p.fw-normal.mb-0=config.designation
+
+mixin HeroHeader
+  section.py-5.overflow-hidden#home
+    +Background({ image: `${CWD}assets/img/gallery/hero-header.png`, attrs: { style: {} }, className: 'w-50 bg-right d-none d-md-block' })
+    .container
+      .row
+        .col-md-7.col-lg-6.pt-8.text-md-start.text-center
+          h4.text-400 DESIGN INSPIRATION
+          h1.text-800.mb-5.display-1.fs-md-5.fs-lg-6.fs-xl-7.fs-xxl-8 Convallis turpis erat tempus, viverra aliquet. 
+            br.d-none.d-xxl-block
+            |are accessible near you
+          a.btn.btn-primary(href='#' role='button')
+            | Get In Touch
+          .mt-8
+            #carouselPopularItems.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+              .carousel-inner
+                .carousel-item.active(data-bs-interval='10000')
+                  .row.gx-3.h-100.align-items-center            
+                    +Testimonials(testimonial[0])                                                                                                                                       
+                .carousel-item(data-bs-interval='5000')
+                  .row.gx-3.h-100.align-items-center                                                                            
+                    +Testimonials(testimonial[1])                                                                                        
+                .carousel-item(data-bs-interval='3000')
+                  .row.gx-3.h-100.align-items-center                                                                                                     
+                    +Testimonials(testimonial[2])                      
+                .carousel-item
+                  .row.gx-3.h-100.align-items-center                                                                        
+                    +Testimonials(testimonial[3])   
+              .position-relative.col-2.col-md-3.col-xl-2.ms-auto      
+                button.carousel-control-prev.carousel-icon(type='button' data-bs-target='#carouselPopularItems' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next.carousel-icon(type='button' data-bs-target='#carouselPopularItems' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next   
+
+
+

@@ -1,0 +1,22 @@
+append variables
+  -
+    var studio = [
+      {
+        order: 'order-1 order-md-0',
+        image:'studio-website-1.png',
+        title:'The best design for your studio website',
+        text:'Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.'
+      },
+      {
+        order: 'order-0 order-md-1',
+        image:'studio-website-1.png',
+        title:'The best design for your studio website',
+        text:'Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.'
+      },
+    ]
+mixin StudioWebsite
+  section.bg-soft-info
+    .container(style="padding-top:400px;")
+      +Feature(studio[0])
+  +Section.bg-soft-info 
+    +Feature(studio[1])

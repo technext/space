@@ -1,0 +1,41 @@
+append variables
+  -
+    var teams= [
+      {
+        image:'andry-ford.png',
+        name  :'Andry Ford',
+        designation:'Ceo',
+      },
+      {
+        image:'carrey.png',
+        name  :'Carrey Johnson',
+        designation:'Senior Developer',
+      },
+      {
+        image:'ray.png',
+        name  :'Ray Marie',
+        designation:'Developer',  
+      },
+      {
+        image:'austin.png',
+        name  :'Austin Min',
+        designation:'Designer',
+      },
+      
+    ];
+mixin TeamMember(config) 
+  .col-sm-6.col-lg-3.text-center
+    img(src=`${CWD}assets/img/gallery/${config.image}` width='290'  alt='...')
+    h5.fw-bold.mt-4.mb-1=config.name
+    p=config.designation
+
+mixin Leadership
+  +Section
+    .row.justify-content-center.mb-6
+      .col-lg-6.col-xxl-5.text-center.mx-auto.mb-7
+        h5.fw-bold.fs-3.fs-lg-5.fs-xxl-7.lh-sm.mb-3 Our leadership
+        p.mb-0 Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.
+      .col-xxl-11
+        .row.flex-center.gx-0
+          each item in teams
+            +TeamMember(item)

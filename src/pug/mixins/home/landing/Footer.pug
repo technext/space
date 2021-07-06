@@ -1,0 +1,46 @@
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.text-200.text-decoration-none(href='#!')
+        =item
+
+mixin Footer
+  +Section.py-0.pt-7.bg-1000
+    .row
+      .col-12.col-md-8.col-lg-6.col-xxl-4
+        span.text-500.fs-3.fw-bold.ms-2
+          i space
+        p.text-light.mt-4 The best design for your web studio website. Vitae nulla nunc euismod vel pretium tellus accumsan semper. Vitae nulla nunc euismod vel pretium tellus accumsan semper. 
+ 
+      .col-6.col-md-4.col-lg-3.col-xxl-2.mb-3
+        h5.lh-lg.fw-bold.text-white COMPANY
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('About Us','Team','Careers','blog')
+         
+      .col-6.col-md-4.col-lg-3.col-xxl-2.col-lg-3.mb-3
+        h5.lh-lg.fw-bold.text-white CONTACT
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Help & Support','Partner with us ','Ride with us','Ride with us')
+
+      .col-6.col-md-4.col-lg-3.col-xxl-2.mb-3
+        h5.lh-lg.fw-bold.text-white LEGAL
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Terms & Conditions','Refund & Cancellation','Privacy Policy','Cookie Policy')
+
+      .col-6.col-md-4.col-lg-3.col-xxl-2.mb-3
+        h5.lh-lg.fw-bold.text-white LEGAL
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Terms & Conditions','Refund & Cancellation','Privacy Policy')
+    hr.border.border-800
+    .row.flex-center.pb-3
+      .col-md-6.order-0 
+        p.text-200.text-center.text-md-start All rights Reserved &copy;  Your Company, 2021
+      .col-md-6.order-1
+        p.text-200.text-center.text-md-end  Made with&nbsp;
+          svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='#0E6FFF' viewBox='0 0 16 16')
+            path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+          |&nbsp;by&nbsp;
+          a(href='https://themewagon.com/' target='_blank').text-200.fw-bold ThemeWagon 
+   
+     

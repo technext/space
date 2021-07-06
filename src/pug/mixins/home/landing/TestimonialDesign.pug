@@ -1,0 +1,66 @@
+append variables
+  -
+    var design= [
+      {
+        name:'Name',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.Ac aliquam ac volutpat, viverra magna risus. ',
+      },
+      {
+        name:'Name',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam. ',
+      },
+      {
+        name:'Name',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat. ',
+      },
+      {
+        name:'Name',
+        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.Ac aliquam ac volutpat, viverra magna risus. ',
+      },
+     
+    ];
+mixin DesignConcept(config)
+  .col-sm-6.col-lg-3.mb-5
+    .card.card-span.shadow.h-100.px-3.py-5
+      .card-body
+        h3!=config.name
+        p!=config.text
+        a(href='#!') Experienced team
+
+mixin DesignConcepts
+  +Section.py-4.overflow-hidden
+    .row.h-100
+      .col-lg-7.mx-auto.text-center.mt-7.mb-5
+        h5 DESIGN CONCEPT
+        h5.fw-bold.fs-3.fs-lg-5.fs-xxl-7 The best design for your
+          br
+          |studio website
+      .col-12
+        #carouselDesignConcepts.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+          .carousel-inner
+            .carousel-item.active(data-bs-interval='10000')
+              .row.gx-3.px-3.pt-6.h-100          
+                +DesignConcept(design[0])                                                                    
+                +DesignConcept(design[1])                                                                    
+                +DesignConcept(design[2])                                                                    
+                +DesignConcept(design[3])                                                                                                                                       
+            .carousel-item(data-bs-interval='5000')
+              .row.gx-3.p-6.h-100           
+                +DesignConcept(design[0])                                                                    
+                +DesignConcept(design[1])                                                                    
+                +DesignConcept(design[2])
+                +DesignConcept(design[3])                                         
+            .carousel-item(data-bs-interval='3000')
+              .row.gx-3.p-6.h-100                               
+                +DesignConcept(design[0])                                                                    
+                +DesignConcept(design[1])                                                                    
+                +DesignConcept(design[2])
+                +DesignConcept(design[3])                                             
+          .row
+            .col-3.col-sm-2.col-lg-1.position-relative
+              button.carousel-control-prev.carousel-icon(type='button' data-bs-target='#carouselDesignConcepts' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+              button.carousel-control-next.carousel-icon(type='button' data-bs-target='#carouselDesignConcepts' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next 

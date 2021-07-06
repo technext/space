@@ -1,0 +1,22 @@
+mixin NavbarSpace
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-4.d-block.navbar-space(data-navbar-on-scroll)
+    .container
+      a.navbar-brand.d-inline-flex(href='index.html')
+        span.text-1000.fs-3.fw-bold.ms-2
+          i space
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon 
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
+        ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base
+          li.nav-item.px-2(data-anchor)
+            a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home
+          li.nav-item.px-2(data-anchor)
+            a.nav-link(href='#templates') Templates
+          li.nav-item.px-2(data-anchor)
+            a.nav-link(href='#price') Price
+          li.nav-item.px-2(data-anchor)
+            a.nav-link(href='#help') Help
+          
+        form.ps-lg-5
+          button.btn.btn-link.text-primary.fw-bold.order-1.order-lg-0(type='button') Sign in
+          

@@ -1,0 +1,14 @@
+append variables
+  -
+    var requirements = [
+      {
+        imageOne:'requirments-1.png',
+        imageTwo:'requirments-2.png',
+        order: 'order-1 order-md-0',
+        title:'Requirements gathering<br>and analysis for references.',
+        text:'Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.'
+      },
+    ]
+mixin Requirements
+  +Section.z-index-2(style="margin-bottom:-545px;")
+    +InfoText(requirements[0])

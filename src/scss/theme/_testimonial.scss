@@ -1,0 +1,21 @@
+
+
+// //*----------------------------- bootstrap carousel ------------------*//
+
+.carousel-icon {
+  width: auto;
+  .carousel-control-prev-icon {
+   
+    &:hover {
+      background-color: $carousel-control-bg-color;
+    }
+  }
+  .carousel-control-next-icon {
+   
+    &:hover {
+      background-color: $carousel-control-bg-color;
+    }
+  }
+ 
+}
+

@@ -1,0 +1,36 @@
+append variables
+  -
+    var reviewsItems= [
+      {
+        image:'user-1.png',
+        text:`“Every single person comes away and says - wow that's a really slick experience, that was so easy to use. I feel so much less stressed as I now know we’re doing everything by the book.”`,
+        name:'Andry Ford',
+        designation:'CEO at Whatever',
+      },
+      {
+        image:'user-2.png',
+        text:`I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> as I now know we’re doing everything by the book.”`,
+        name:'Andry Ford',
+        designation:'CEO at Whatever',
+      },
+
+
+    ];
+
+mixin Reviews(config)
+  h1.fs-4.mb-8!=config.text
+    .d-flex.align-items-md-center.mt-5
+      img(src=`${CWD}assets/img/gallery/${config.image}` width="100" alt='').img-fluid.me-4.me-md-3.me-lg-4
+      .w-lg-100.my-3
+        h5.mb-0.fw-bold=config.name
+        p.fw-normal.mb-0=config.designation
+
+mixin Review(config)
+  section.py-0
+    +Background({ image: `${CWD}assets/img/gallery/review-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover'} }, className: ' rounded-3' })
+    .container 
+      .row.flex-center 
+        .col-xxl-8
+          +Reviews(reviewsItems[0])
+          +Reviews(reviewsItems[1])
+
