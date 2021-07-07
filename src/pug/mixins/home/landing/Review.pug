@@ -27,10 +27,10 @@ mixin Reviews(config)
 
 mixin Review(config)
   section.py-0
-    +Background({ image: `${CWD}assets/img/gallery/review-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover'} }, className: ' rounded-3' })
+    +Background({ image: `${CWD}assets/img/gallery/review-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'contain'} }, className: ' rounded-3' })
     .container 
       .row.flex-center 
-        .col-xxl-8
+        .col-xl-8
           +Reviews(reviewsItems[0])
           +Reviews(reviewsItems[1])
 

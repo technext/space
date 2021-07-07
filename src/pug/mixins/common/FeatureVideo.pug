@@ -1,7 +1,7 @@
 mixin Feature(config) 
   .row.flex-center
     .col-md-6(class=`${config.order}`)
-      img(src=`${CWD}assets/img/gallery/${config.image}`   alt='...')
+      img.w-100(src=`${CWD}assets/img/gallery/${config.image}`   alt='...')
     .col-md-6
       h1.fs-6.card-title.my-4!=config.title
       p.fs-1!=config.text
