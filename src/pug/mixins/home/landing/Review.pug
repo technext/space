@@ -18,10 +18,11 @@ append variables
     ];
 
 mixin Reviews(config)
-  h1.fs-4.mb-8!=config.text
+  .mb-7
+    h1.fs-4!=config.text
     .d-flex.align-items-md-center.mt-5
       img(src=`${CWD}assets/img/gallery/${config.image}` width="100" alt='').img-fluid.me-4.me-md-3.me-lg-4
-      .w-lg-100.my-3
+      .w-lg-100.my-2
         h5.mb-0.fw-bold=config.name
         p.fw-normal.mb-0=config.designation
 

@@ -2,20 +2,20 @@ append variables
   -
     var design= [
       {
-        name:'Name',
-        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.Ac aliquam ac volutpat, viverra magna risus. ',
+        name:'Safira Petterson',
+        text:'It would be only imprudent if you dont grab this app now and use it at its best, with all the great facilities it got.',
       },
       {
-        name:'Name',
-        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam. ',
+        name:'Nazip Terasi',
+        text:'Myriad options and brillant outlook: what more I can ask for? I trust this app for it well furnished features and reliable modeling. The best of all is it got the option of scalability which opens up a big window of opportunity. It is the tool of future. ',
       },
       {
-        name:'Name',
-        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat. ',
+        name:'Manion Potter',
+        text:'From the production to deployment, this one is an absolute marvel to be work with. Give it your shot so that you don’t regret',
       },
       {
-        name:'Name',
-        text:'Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.Ac aliquam ac volutpat, viverra magna risus. ',
+        name:'Frankistain Belio',
+        text:'The app totally surprised me with its well planned designs and fine structured build-up. For a brilliant team-work, this one is a perfect choice.  ',
       },
      
     ];
@@ -30,28 +30,28 @@ mixin DesignConcept(config)
 mixin DesignConcepts
   +Section.py-4.overflow-hidden
     .row.h-100
-      .col-lg-7.mx-auto.text-center.mt-7.mb-5
+      .col-lg-7.mx-auto.text-center.py-5
         h5 DESIGN CONCEPT
-        h5.fw-bold.fs-3.fs-lg-5.fs-xxl-7 The best design for your
+        h5.fw-bold.fs-3.fs-lg-5.fs-xxl-7 The best design team for your
           br
           |studio website
       .col-12
         #carouselDesignConcepts.carousel.slide(data-bs-touch="false" data-bs-interval="false")
           .carousel-inner
             .carousel-item.active(data-bs-interval='10000')
-              .row.gx-3.px-3.pt-6.h-100          
+              .row.gx-3.px-3.pt-3.h-100          
                 +DesignConcept(design[0])                                                                    
                 +DesignConcept(design[1])                                                                    
                 +DesignConcept(design[2])                                                                    
                 +DesignConcept(design[3])                                                                                                                                       
             .carousel-item(data-bs-interval='5000')
-              .row.gx-3.p-6.h-100           
+              .row.gx-3.px-3.pt-3.h-100           
                 +DesignConcept(design[0])                                                                    
                 +DesignConcept(design[1])                                                                    
                 +DesignConcept(design[2])
                 +DesignConcept(design[3])                                         
             .carousel-item(data-bs-interval='3000')
-              .row.gx-3.p-6.h-100                               
+              .row.gx-3.px-3.pt-3.h-100                               
                 +DesignConcept(design[0])                                                                    
                 +DesignConcept(design[1])                                                                    
                 +DesignConcept(design[2])

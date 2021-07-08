@@ -4,33 +4,27 @@ append variables
     var testimonial= [
       {
         image:'user-1.png',
-        text:'I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> <br>as I now know by the book"',
+        text:'I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> <br class="d-md-none d-lg-block">as I now know by the book and hopefully ..."',
         name:'Andry Ford',
         designation:'CEO at Whatever',
       },
       {
-        image:'user-1.png',
-        text:`I feel so much less stressed <i class="fa fa-heart text-danger fs-2"></i> <br>  as I now know by the book"`,
-        name:'Andry Ford',
-        designation:'CEO at Whatever',
+        image:'user-2.png',
+        text:`Amazing theme, excellent support from ThemeWagon with really fast reaction time!`,
+        name:'Kosta',
+        designation:'Designer',
       },
       {
         image:'user-1.png',
-        text:'I feel so much less stressed<i class="fa fa-heart text-danger fs-2"></i>  <br>as I now know by the book"',
-        name:'',
-        designation:'',
+        text:'Excellent. All my doubts were answered by the team quickly. I highly recommend it.',
+        name:'Vitor',
+        designation:'Developer',
       },
-      {
-        image:'user-1.png',
-        text:'I feel so much less stressed<i class="fa fa-heart text-danger fs-2"></i>  <br>as I now know by the book"',
-        name:'',
-        designation:'',
-      },
-   
+    
     ];
 
 mixin Testimonials(config)
-  h1.fs-4!=config.text
+  h1.fs-4.fs-md-3.fs-lg-4!=config.text
   .d-flex.align-items-md-center
     img(src=`${CWD}assets/img/gallery/${config.image}` width="100" alt='').img-fluid.me-4.me-md-3.me-lg-4
     .w-lg-50.my-3
@@ -43,10 +37,10 @@ mixin HeroHeader
     .container
       .row
         .col-md-7.col-lg-6.pt-8.text-md-start.text-center
-          h4.text-400 DESIGN INSPIRATION
-          h1.text-800.mb-5.display-1.fs-md-5.fs-lg-6.fs-xl-7.fs-xxl-8 Convallis turpis erat tempus, viverra aliquet. 
+          h4.fw-normal.text-400 DESIGN INSPIRATION
+          h1.mb-5.display-1.fs-md-5.fs-lg-6.fs-xl-7.fs-xxl-8 With Webdesign Inspiration, you will get 
             br.d-none.d-xxl-block
-            |are accessible near you
+            |ideas every day to create better products. 
           a.btn.btn-primary(href='#' role='button')
             | Get In Touch
           .mt-8
@@ -60,10 +54,7 @@ mixin HeroHeader
                     +Testimonials(testimonial[1])                                                                                        
                 .carousel-item(data-bs-interval='3000')
                   .row.gx-3.h-100.align-items-center                                                                                                     
-                    +Testimonials(testimonial[2])                      
-                .carousel-item
-                  .row.gx-3.h-100.align-items-center                                                                        
-                    +Testimonials(testimonial[3])   
+                    +Testimonials(testimonial[2])                        
               .position-relative.col-2.col-md-3.col-xl-2.ms-auto      
                 button.carousel-control-prev.carousel-icon(type='button' data-bs-target='#carouselPopularItems' data-bs-slide='prev')
                   span.carousel-control-prev-icon(aria-hidden='true')

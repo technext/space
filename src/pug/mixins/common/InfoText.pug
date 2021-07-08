@@ -3,8 +3,8 @@ mixin InfoText(config)
     .col-md-4(class=`${config.order}`)
       img.img-fluid(src=`${CWD}assets/img/gallery/${config.imageOne}` alt='...')  
     .col-md-8
-      .offset-lg-1
-        h1.card-title.my-4!=config.title
+      .ps-lg-8
+        h1.fs-lg-6.my-4!=config.title
         p.fs-1!=config.text
-      .text-start.mt-5
+      .text-start.mt-5.d-none.d-md-block
         img.img-fluid(src=`${CWD}assets/img/gallery/${config.imageTwo}` alt='...')

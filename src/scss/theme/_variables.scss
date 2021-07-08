@@ -284,7 +284,7 @@ $h6-font-size: map_get($font-sizes, '-1') !default;
 
 $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: $font-weight-bold !default;
-$headings-color: $gray-1000 !default;
+$headings-color: $black !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: () !default;
@@ -428,7 +428,7 @@ $card-cap-bg:                        tint-color($gray-500, 90%) !default;
 //-----------------------------------------------*/
 $carousel-control-opacity: 0.9 !default;
 $carousel-control-hover-opacity: 0.9 !default;
-$carousel-control-color:     rgba($primary, .3) !default;
+$carousel-control-color:     rgba($gray-600, .3) !default;
 
 $carousel-indicator-active-bg:       $primary !default;
 $carousel-indicator-width:           25px !default;
@@ -445,4 +445,4 @@ $nav-tabs-link-active-color:        $orange !default;
 $nav-tabs-link-active-border-color: transparent !default;
 $nav-tabs-link-active-bg:          rgba($orange, 0.15) !default;
 $nav-link-color:                    $gray-700 !default;
-
+$navbar-light-color:                $gray-500 !important;

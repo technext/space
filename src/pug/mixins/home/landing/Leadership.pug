@@ -24,18 +24,18 @@ append variables
       
     ];
 mixin TeamMember(config) 
-  .col-sm-6.col-lg-3.text-center
-    img(src=`${CWD}assets/img/gallery/${config.image}` width='260'  alt='...')
+  .col-sm-6.col-lg-3.mb-3.mb-lg-0.text-center
+    img(src=`${CWD}assets/img/gallery/${config.image}`  alt='...').w-100
     h5.fw-bold.mt-4.mb-1=config.name
     p=config.designation
 
 mixin Leadership
-  +Section
+  +Section#team.pt-4
     .row.justify-content-center.mb-6
       .col-lg-6.col-xxl-5.text-center.mx-auto.mb-7
         h5.fw-bold.fs-3.fs-lg-5.fs-xxl-7.lh-sm.mb-3 Our leadership
-        p.mb-0 Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.
+        p.mb-0 Meet our Organization leaders and experts. Our leadership team drives our company and leads our people.
       .col-xxl-11
-        .row.flex-center.gx-0
+        .row.flex-center.gx-3
           each item in teams
             +TeamMember(item)
